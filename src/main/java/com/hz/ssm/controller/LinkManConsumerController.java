@@ -21,6 +21,9 @@ public class LinkManConsumerController {
 	public Linkman  findLinkanById(@PathVariable("id") Long linkmanId){
 		System.out.println("================================");
 		
+		
+		
+		System.out.println("00000000000000000000000000");
 		Linkman linkman = restTemplate.getForObject(LINK_URL+"getLinkMan/"+linkmanId, Linkman.class);
 		
 		return linkman;

@@ -19,6 +19,8 @@ public class LinkManConsumerController {
 	
 	@GetMapping("/findLinkanById/{id}")
 	public Linkman  findLinkanById(@PathVariable("id") Long linkmanId){
+		System.out.println("================================");
+		
 		Linkman linkman = restTemplate.getForObject(LINK_URL+"getLinkMan/"+linkmanId, Linkman.class);
 		
 		return linkman;
